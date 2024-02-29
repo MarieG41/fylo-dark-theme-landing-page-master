@@ -1,0 +1,21 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--Dark-Blue-intro-email-sign-up-background);
+    padding-bottom: 40px;
+    img {
+        padding-left: 40px;
+        padding-top: 80px;
+    }
+    nav {
+        padding-top: 80px;
+        padding-right: 40px;
+        a {
+            text-decoration: none;
+            color: white;
+            padding-right: 40px;
+            font-weight: 400;
+        }
+    }
+}

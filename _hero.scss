@@ -1,0 +1,42 @@
+section {
+    background-color: var(--Dark-Blue-intro-email-sign-up-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 200px;
+    .intro {
+        width: 40%;
+    }
+    .background {
+        width: 100%;
+        position: absolute;
+        top: 670px;
+        z-index: 0;
+    }
+    h1 {
+        font-family: 'Raleway' sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        width: 800px;
+        text-align: center;
+        margin: 40px 0;
+        z-index: 2;
+        line-height: 150%;
+    }
+    p {
+        width: 440px;
+        text-align: center;
+        line-height: 150%;
+        margin-bottom: 40px;
+        z-index: 2;
+    }
+    button {
+        font-family: 'Raleway' sans-serif;
+        color: var(--White);
+        background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+        border: none;
+        border-radius: 30px;
+        padding: 15px 75px;
+        z-index: 2;
+    }
+}
