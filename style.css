@@ -107,6 +107,7 @@ main .arguments p {
 main .productive {
   display: grid;
   grid-template-columns: 780px 500px;
+  justify-content: center;
   column-gap: 20px;
 }
 main .productive img {
@@ -136,8 +137,133 @@ main .productive a {
   text-underline-offset: 9px;
 }
 
+.background-quotes {
+  position: absolute;
+  top: 2290px;
+  left: 100px;
+  z-index: 0;
+}
+
+.testimonials {
+  z-index: 2;
+  position: relative;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 310px;
+  justify-content: center;
+  column-gap: 50px;
+  padding-bottom: 250px;
+}
+.testimonials .clients-1, .testimonials .clients-2, .testimonials .clients-3 {
+  background-color: var(--Dark-Blue-testimonials-background);
+  padding: 30px;
+  border-radius: 5px;
+  margin-bottom: 100px;
+}
+.testimonials .clients-1 img, .testimonials .clients-2 img, .testimonials .clients-3 img {
+  width: 70%;
+  border-radius: 50%;
+}
+.testimonials .clients-1 p, .testimonials .clients-2 p, .testimonials .clients-3 p {
+  line-height: 150%;
+  font-family: "Raleway" sans-serif;
+  font-weight: 400;
+  padding-bottom: 25px;
+}
+.testimonials .clients-1 .clients, .testimonials .clients-2 .clients, .testimonials .clients-3 .clients {
+  display: grid;
+  grid-template-columns: 50px 150px;
+}
+.testimonials .clients-1 .clients h4, .testimonials .clients-2 .clients h4, .testimonials .clients-3 .clients h4 {
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+.testimonials .clients-1 .clients h5, .testimonials .clients-2 .clients h5, .testimonials .clients-3 .clients h5 {
+  font-size: 12px;
+}
+
+.newsletter {
+  background-color: var(--Dark-Blue-intro-email-sign-up-background);
+  top: 2700px;
+  margin-left: 350px;
+  width: 800px;
+  position: absolute;
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 8px 25px 0px hsl(216, 56%, 5%);
+  box-shadow: 0px 8px 25px 0px hsl(216, 56%, 5%);
+}
+.newsletter button {
+  font-family: "Raleway" sans-serif;
+  color: var(--White);
+  background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+  border: none;
+  border-radius: 30px;
+  padding: 15px 25px;
+  z-index: 2;
+}
+.newsletter h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 125%;
+  padding-bottom: 20px;
+}
+.newsletter p {
+  line-height: 150%;
+  padding-bottom: 20px;
+  padding: 0 60px;
+  margin-bottom: 40px;
+}
+.newsletter input {
+  margin-right: 30px;
+  width: 500px;
+  border-radius: 50px;
+  padding: 15px 15px;
+  border: none;
+  background-color: var(--White);
+}
+
 footer {
+  padding: 180px 80px;
   background-color: var(--Dark-Blue-footer-background);
+  display: grid;
+  grid-template-columns: 300px 200px 200px 200px 200px;
+  column-gap: 50px;
+  justify-content: space-evenly;
+}
+footer .column-1 p {
+  padding-top: 30px;
+  line-height: 150%;
+}
+footer .column-2 {
+  padding-top: 80px;
+}
+footer .column-3, footer .column-4 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+}
+footer a {
+  color: var(--White);
+  text-decoration: none;
+  padding-bottom: 15px;
+}
+footer img {
+  padding-right: 15px;
+}
+footer .column-5 {
+  display: flex;
+  padding-top: 80px;
+}
+footer .column-5 svg {
+  width: 15%;
+  margin-right: 15px;
+  border: 2px solid var(--White);
+  border-radius: 50%;
+  height: 23%;
+  padding: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

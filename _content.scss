@@ -24,6 +24,7 @@ main {
     .productive {
         display: grid;
         grid-template-columns: 780px 500px;
+        justify-content: center;
         column-gap: 20px;
         img {
             padding: 100px;

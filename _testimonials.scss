@@ -1,1 +1,44 @@
+ .background-quotes {
+    position: absolute;
+    top: 2290px;
+    left: 100px;
+    z-index: 0;
+ }
  
+ .testimonials {
+    z-index: 2;
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 310px;
+    justify-content: center;
+    column-gap: 50px;
+    padding-bottom: 250px;
+    .clients-1, .clients-2, .clients-3 {
+        background-color: var(--Dark-Blue-testimonials-background);
+        padding: 30px;
+        border-radius: 5px;
+        margin-bottom: 100px;
+        img {
+            width: 70%;
+            border-radius: 50%;
+        }
+        p{
+            line-height: 150%;
+            font-family: 'Raleway' sans-serif;
+            font-weight: 400;
+            padding-bottom: 25px;
+        }
+        .clients {
+            display: grid;
+            grid-template-columns: 50px 150px;
+            h4 {
+                font-weight: 700;
+                padding-bottom: 8px;
+            }
+            h5 {
+                font-size: 12px;
+            }
+        }
+    }
+ }
