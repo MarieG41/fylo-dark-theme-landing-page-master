@@ -8,17 +8,27 @@ main {
         justify-content: center;
         text-align: center;
         column-gap: 200px;
+        @include media($until: tablet) {
+            display: block;
+            padding: 100px 0;
+            width: 370px;
+        }
         img {
             padding-bottom: 25px;
+            @include media($until: tablet) {
+                padding: 25px 0;
+            }
         }
         h3 {
             font-family: 'Raleway', sans-serif;
             font-size: 20px;
             font-weight: 700;
             padding-bottom: 15px;
+            text-align: center;
         }
         p {
             line-height: 150%;
+            text-align: center;
         }
     }
     .productive {
@@ -44,13 +54,19 @@ main {
         }
         .link-arrow {
             padding-top: 10px;
-            img {
+            a {
+            color: var(--Cyan-inside-call-to-action-gradient);
+            text-underline-offset: 9px;
+        }
+        a:hover {
+            color: var(--White);
+        }
+        svg {
                 padding: 0 0 0 5px;
             }
         }
-        a {
-            color: var(--Cyan-inside-call-to-action-gradient);
-            text-underline-offset: 9px;
+        g use:hover {
+            fill: var(--White);
         }
     }
 }

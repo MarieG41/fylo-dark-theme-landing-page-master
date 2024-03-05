@@ -1,3 +1,10 @@
+/**
+* SassQueries
+* Manage media-queries in Sass easily.
+*
+* @author     Samuel Marchal (zessx)
+* @version    0.3
+*/
 :root {
   --Dark-Blue-intro-email-sign-up-background: hsl(217, 28%, 15%);
   --Dark-Blue-main-background: hsl(218, 28%, 13%);
@@ -22,19 +29,49 @@ header {
   background-color: var(--Dark-Blue-intro-email-sign-up-background);
   padding-bottom: 40px;
 }
+@media all and (max-width: 767px) {
+  header {
+    width: 375px;
+  }
+}
 header img {
   padding-left: 40px;
   padding-top: 80px;
 }
+@media all and (max-width: 767px) {
+  header img {
+    width: 20%;
+    padding-left: 20px;
+    padding-top: 40px;
+    height: 100%;
+  }
+}
 header nav {
   padding-top: 80px;
   padding-right: 40px;
+}
+@media all and (max-width: 767px) {
+  header nav {
+    padding-top: 40px;
+    padding-right: 0;
+    width: 250px;
+    margin-left: 70px;
+  }
 }
 header nav a {
   text-decoration: none;
   color: white;
   padding-right: 40px;
   font-weight: 400;
+}
+@media all and (max-width: 767px) {
+  header nav a {
+    padding-right: 20px;
+  }
+}
+header nav a:hover {
+  text-decoration: underline;
+  font-weight: 700;
 }
 
 section {
@@ -44,8 +81,18 @@ section {
   align-items: center;
   padding-bottom: 200px;
 }
+@media all and (max-width: 767px) {
+  section {
+    padding-bottom: 0;
+  }
+}
 section .intro {
   width: 40%;
+}
+@media all and (max-width: 767px) {
+  section .intro {
+    width: 100%;
+  }
 }
 section .background {
   width: 100%;
@@ -54,14 +101,20 @@ section .background {
   z-index: 0;
 }
 section h1 {
-  font-family: "Raleway" sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 30px;
   font-weight: 700;
   width: 800px;
   text-align: center;
   margin: 40px 0;
-  z-index: 2;
   line-height: 150%;
+  z-index: 2;
+}
+@media all and (max-width: 767px) {
+  section h1 {
+    width: 310px;
+    padding: 0 20px;
+  }
 }
 section p {
   width: 440px;
@@ -70,14 +123,24 @@ section p {
   margin-bottom: 40px;
   z-index: 2;
 }
+@media all and (max-width: 767px) {
+  section p {
+    width: 320px;
+    font-size: 15px;
+  }
+}
 section button {
-  font-family: "Raleway" sans-serif;
+  font-family: "Raleway", sans-serif;
   color: var(--White);
   background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
   border: none;
   border-radius: 30px;
   padding: 15px 75px;
   z-index: 2;
+}
+section button:hover {
+  background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(176, 68%, 64%));
+  font-weight: 700;
 }
 
 main {
@@ -92,17 +155,31 @@ main .arguments {
   text-align: center;
   column-gap: 200px;
 }
+@media all and (max-width: 767px) {
+  main .arguments {
+    display: block;
+    padding: 100px 0;
+    width: 370px;
+  }
+}
 main .arguments img {
   padding-bottom: 25px;
+}
+@media all and (max-width: 767px) {
+  main .arguments img {
+    padding: 25px 0;
+  }
 }
 main .arguments h3 {
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   font-weight: 700;
   padding-bottom: 15px;
+  text-align: center;
 }
 main .arguments p {
   line-height: 150%;
+  text-align: center;
 }
 main .productive {
   display: grid;
@@ -129,12 +206,18 @@ main .productive p {
 main .productive .link-arrow {
   padding-top: 10px;
 }
-main .productive .link-arrow img {
-  padding: 0 0 0 5px;
-}
-main .productive a {
+main .productive .link-arrow a {
   color: var(--Cyan-inside-call-to-action-gradient);
   text-underline-offset: 9px;
+}
+main .productive .link-arrow a:hover {
+  color: var(--White);
+}
+main .productive .link-arrow svg {
+  padding: 0 0 0 5px;
+}
+main .productive g use:hover {
+  fill: var(--White);
 }
 
 .background-quotes {
@@ -152,7 +235,7 @@ main .productive a {
   grid-template-rows: 310px;
   justify-content: center;
   column-gap: 50px;
-  padding-bottom: 250px;
+  padding-bottom: 100px;
 }
 .testimonials .clients-1, .testimonials .clients-2, .testimonials .clients-3 {
   background-color: var(--Dark-Blue-testimonials-background);
@@ -182,10 +265,16 @@ main .productive a {
   font-size: 12px;
 }
 
-.newsletter {
+.news-email {
+  background-color: var(--Dark-Blue-main-background);
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.news-email .newsletter {
   background-color: var(--Dark-Blue-intro-email-sign-up-background);
-  top: 2700px;
-  margin-left: 350px;
+  top: 2725px;
   width: 800px;
   position: absolute;
   padding: 40px;
@@ -194,8 +283,8 @@ main .productive a {
   -webkit-box-shadow: 0px 8px 25px 0px hsl(216, 56%, 5%);
   box-shadow: 0px 8px 25px 0px hsl(216, 56%, 5%);
 }
-.newsletter button {
-  font-family: "Raleway" sans-serif;
+.news-email .newsletter button {
+  font-family: "Raleway", sans-serif;
   color: var(--White);
   background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
   border: none;
@@ -203,20 +292,24 @@ main .productive a {
   padding: 15px 25px;
   z-index: 2;
 }
-.newsletter h2 {
+.news-email .newsletter button:hover {
+  background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(176, 68%, 64%));
+  font-weight: 700;
+}
+.news-email .newsletter h2 {
   font-family: "Raleway", sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 125%;
   padding-bottom: 20px;
 }
-.newsletter p {
+.news-email .newsletter p {
   line-height: 150%;
   padding-bottom: 20px;
   padding: 0 60px;
   margin-bottom: 40px;
 }
-.newsletter input {
+.news-email .newsletter input {
   margin-right: 30px;
   width: 500px;
   border-radius: 50px;
@@ -250,6 +343,9 @@ footer a {
   text-decoration: none;
   padding-bottom: 15px;
 }
+footer a:hover {
+  font-weight: 700;
+}
 footer img {
   padding-right: 15px;
 }
@@ -264,6 +360,24 @@ footer .column-5 svg {
   border-radius: 50%;
   height: 23%;
   padding: 5px;
+}
+footer .column-5 .facebook:hover {
+  border: 2px solid blue;
+}
+footer .column-5 .facebook path:hover {
+  fill: blue;
+}
+footer .column-5 .twitter:hover {
+  border: 2px solid aqua;
+}
+footer .column-5 .twitter path:hover {
+  fill: aqua;
+}
+footer .column-5 .insta:hover {
+  border: 2px solid plum;
+}
+footer .column-5 .insta path:hover {
+  fill: plum;
 }
 
 /*# sourceMappingURL=style.css.map */

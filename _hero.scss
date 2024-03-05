@@ -4,8 +4,14 @@ section {
     flex-direction: column;
     align-items: center;
     padding-bottom: 200px;
+    @include media($until: tablet) {
+        padding-bottom: 0;
+    }
     .intro {
         width: 40%;
+        @include media($until: tablet) {
+            width: 100%;
+        }
     }
     .background {
         width: 100%;
@@ -14,14 +20,18 @@ section {
         z-index: 0;
     }
     h1 {
-        font-family: 'Raleway' sans-serif;
+        font-family: 'Raleway', sans-serif;
         font-size: 30px;
         font-weight: 700;
         width: 800px;
         text-align: center;
         margin: 40px 0;
-        z-index: 2;
         line-height: 150%;
+        z-index: 2;
+        @include media($until: tablet) {
+            width: 310px;
+            padding: 0 20px;
+        }
     }
     p {
         width: 440px;
@@ -29,14 +39,23 @@ section {
         line-height: 150%;
         margin-bottom: 40px;
         z-index: 2;
+        @include media($until: tablet) {
+            width: 320px;
+            font-size: 15px;
+        }
     }
+    
     button {
-        font-family: 'Raleway' sans-serif;
+        font-family: 'Raleway', sans-serif;
         color: var(--White);
         background: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
         border: none;
         border-radius: 30px;
         padding: 15px 75px;
         z-index: 2;
+    }
+    button:hover {
+        background: linear-gradient(to right, hsl(176, 68%, 64%),  hsl(176, 68%, 64%));
+        font-weight: 700;
     }
 }
