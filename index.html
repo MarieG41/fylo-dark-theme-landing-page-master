@@ -13,6 +13,7 @@
   <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
 </head>
 <body>
   <header>
@@ -128,13 +129,13 @@
 
       <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
       questions, our support team would be happy to help you.</p>
-        <input type="search" placeholder="example@gmail.com">
-      <button>Get Started For Free</button>
+      <form name="form1" action="#">
+        <input type="email" name="text1" placeholder="example@gmail.com" required>
+        <button class="button" type="submit" name="validate">Get Started For Free</button>
+      </form>
+      <p class="attention"></p>
     </div>
   </div>
-  
-  
-
   <footer>
     
     <div class="column-1">
