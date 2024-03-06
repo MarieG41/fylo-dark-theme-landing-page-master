@@ -13,7 +13,7 @@ header {
         @include media($until: tablet) {
             width: 20%;
             padding-left: 20px;
-            padding-top: 40px;
+            padding-top: 20px;
             height: 100%;
         }
     }
@@ -21,7 +21,7 @@ header {
         padding-top: 80px;
         padding-right: 40px;
         @include media($until: tablet) {
-            padding-top: 40px;
+            padding-top: 20px;
             padding-right: 0;
             width: 250px;
             margin-left: 70px;

@@ -1,5 +1,6 @@
 main {
     background-color: var(--Dark-Blue-main-background);
+    padding-bottom: 100px;
     .arguments {
         padding-top: 20px;
         display: grid;
@@ -36,8 +37,15 @@ main {
         grid-template-columns: 780px 500px;
         justify-content: center;
         column-gap: 20px;
+        @include media($until: tablet) {
+            display: block;
+        }
         img {
             padding: 100px;
+            @include media($until: tablet) {
+                padding: 0;
+                width: 100%;
+            }
         }
         h2 {
             padding-top: 200px;
@@ -47,16 +55,28 @@ main {
             width: 340px;
             line-height: 125%;
             padding-bottom: 20px;
+            @include media($until: tablet) {
+                padding-top: 75px;
+                font-size: 19px;
+                padding-left: 10px;
+            }
         }
         p {
             line-height: 150%;
             padding-bottom: 20px;
+            @include media($until: tablet) {
+                width: 330px;
+                padding-left: 10px;
+            }
         }
         .link-arrow {
             padding-top: 10px;
             a {
             color: var(--Cyan-inside-call-to-action-gradient);
             text-underline-offset: 9px;
+            @include media($until: tablet) {
+                padding-left: 10px;
+            }
         }
         a:hover {
             color: var(--White);
